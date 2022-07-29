@@ -1,38 +1,259 @@
-.App {
-  text-align: center;
+.background-color{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  background-color: #1e1e1e;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.userList{
+  flex: 1;
+  position: relative;
+}
+.userDetail{
+  flex: 1;
+  position: relative;
+}
+.mainContainer{
+  width: 100%;
+  height: 100vh;
+  /* background-color: black; */
+}
+.header{
+  width: 100%;
+  height: 3rem;
+  background-color: #C5DFFF;
+  font-size: 1.5rem;
+margin-bottom: 0.5rem;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.useListContainer {
+  width: 70%;
+  height: 60%;
+  border: 2px solid rgb(255, 166, 166);
+  border-radius: 5px;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+
+}
+.scroller{
+  overflow-y: scroll;
+  flex: 1;
+
+}
+.useDetailContainer{
+  width: 60%;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 166, 166);
+  padding-bottom: 1.3rem;
+}
+.detailProfile{
+  margin-top: 0.8rem;
+}
+.userItem{
+  padding-left: 0.8rem;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  height: 3rem;
+  margin-bottom: 0.5rem;
+background-color: #ECECEC;
+position: relative;
+}
+
+.userItem > p{
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+
+  margin-right: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+.userItem > img{
+  height: 75%;
+}
+
+
+
+
+
+
+.useDetailContainer > img {
+  width: 7rem;
+
+}
+.discription{
+  width: 80%;
+margin-top: 1rem;
+  background-color: #DBDBDB  ;
+  border :1px solid #6C6C6C;
+  padding:  0.8rem 1rem;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+}
+
+.discription > p{
+  margin: 0%;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.userName{
+  color:wheat;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.titleSection{
+  margin-top: 0.8rem;
+  width: 80%;
+}
+.titleSection >span{
+  color:wheat
+}
+.titleBody > p{
+  font-size: 1rem;
+}
+.titleBody{
+  width: 100%;
+  background-color: #DBDBDB  ;
+  border :1px solid #6C6C6C;
+  padding:  0.4rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.87rem;
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+  /* .App {
+    background-color: lightblue;
+  } */
+  .mainContainer{
+    flex-direction: column;
+  }
+  .userList{
+    
+    flex: 1;
+    position: relative;
+  }
+  .userDetail{
+    flex: 2;
+    position: relative;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.darkShade{
+  background-color: #a6a5a5;
+}
+
+
+
+
+
+
+
+
+
+/* Loading Section */
+
+.loadingSection{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  padding: 2rem;
+  background-color: #126b5c;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 7px;
+}
+.loadingSection > :first-child{
+  margin-right: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.loader{
+  border: 8px solid #f3f3f300;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  border-right: 8px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Error Section  */
+.errorSection{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  padding: 2rem;
+  background-color: #126b5c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+}
+
+
+.errorSection > :first-child{
+  margin-right: 1rem;
+  width: 60px;
+  height: 60px;
 }
